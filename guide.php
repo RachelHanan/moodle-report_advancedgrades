@@ -98,9 +98,9 @@ foreach ($data as $line) {
     }
     $sheet->write_string(4, $pos, $line->shortname, $format);
     $sheet->merge_cells(4, $pos, 4, $pos + 1, $format);
-    $sheet->write_string(5, $pos, 'Score', $format2);
+    $sheet->write_string(5, $pos, get_string('score','report_componentgrades'),$format2);
     $sheet->set_column($pos, $pos++, 6); // Set column width to 6.
-    $sheet->write_string(5, $pos, 'Feedback', $format2);
+    $sheet->write_string(5, $pos,get_string('feedback','report_componentgrades'),$format2);
     $sheet->set_column($pos, $pos++, 10); // Set column widths to 10.
 }
 
